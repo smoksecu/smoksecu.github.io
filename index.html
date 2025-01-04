@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> About </title>
+    <title> About Me </title>
     <style>
         body {
             margin: 0;
@@ -14,16 +14,15 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow: auto;
-            position: relative;
+            overflow-x: hidden;
         }
         .card {
             width: 90%;
             max-width: 900px;
-            margin: 50px auto;
+            margin: 20px auto;
             background: #3a3a3a;
             border-radius: 15px;
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -31,30 +30,31 @@
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
         }
         .card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.5);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
         }
         .card-header {
             width: 100%;
             background: linear-gradient(135deg, #1f1f1f, #4e4e4e);
-            padding: 30px 0;
+            padding: 20px;
             text-align: center;
             color: #ffffff;
         }
         .card-header h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             font-weight: bold;
+            margin: 0;
         }
         .profile-section {
             text-align: center;
-            margin-top: -80px;
-            animation: fadeIn 1s ease-in-out;
+            margin-top: -60px;
+            padding: 20px;
         }
         .profile-section img {
             border-radius: 50%;
             border: 6px solid #3a3a3a;
-            width: 160px;
-            height: 160px;
+            width: 120px;
+            height: 120px;
             transition: transform 0.3s ease;
         }
         .profile-section img:hover {
@@ -62,44 +62,43 @@
         }
         .profile-section h2 {
             margin-top: 15px;
-            font-size: 1.8em;
+            font-size: 1.5em;
             color: #ffffff;
             font-weight: bold;
         }
         .profile-section p {
             max-width: 600px;
             margin: 10px auto;
-            font-size: 1em;
+            font-size: 0.9em;
             color: #cfcfcf;
-            line-height: 1.8;
+            line-height: 1.6;
         }
         .skills-section {
             width: 100%;
             background: #2c2c2c;
-            padding: 30px 20px;
+            padding: 20px;
             text-align: center;
-            animation: slideUp 1s ease-in-out;
         }
         .skills-section h3 {
             color: #ffffff;
-            font-size: 1.8em;
-            margin-bottom: 20px;
+            font-size: 1.5em;
+            margin-bottom: 15px;
             font-weight: bold;
         }
         .skills-list {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 10px;
         }
         .skills-list span {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 8px 15px;
             background: #4e4e4e;
             border-radius: 20px;
-            font-size: 1em;
+            font-size: 0.9em;
             color: #ffffff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
             font-weight: bold;
             transition: transform 0.2s ease, background 0.3s;
         }
@@ -109,26 +108,25 @@
         }
         .contact-section {
             width: 100%;
-            padding: 30px 20px;
+            padding: 20px;
             background: #1f1f1f;
             color: #ffffff;
             text-align: center;
-            animation: fadeIn 1s ease-in-out;
         }
         .contact-section h3 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
+            font-size: 1.5em;
+            margin-bottom: 15px;
             font-weight: bold;
         }
         .contact-links a {
             display: inline-block;
             margin: 0 10px;
-            padding: 10px 20px;
+            padding: 8px 15px;
             background: #4e4e4e;
             color: #ffffff;
             border-radius: 20px;
             text-decoration: none;
-            font-size: 1em;
+            font-size: 0.9em;
             transition: background 0.3s, transform 0.2s;
             font-weight: bold;
         }
@@ -139,24 +137,37 @@
         .contact-links a:active {
             transform: scale(0.9);
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+        @media (max-width: 768px) {
+            .profile-section img {
+                width: 100px;
+                height: 100px;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .profile-section h2 {
+                font-size: 1.3em;
+            }
+            .profile-section p {
+                font-size: 0.8em;
+                line-height: 1.5;
+            }
+            .skills-list span {
+                font-size: 0.8em;
+            }
+            .contact-links a {
+                padding: 8px 10px;
+                font-size: 0.8em;
             }
         }
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+        @media (max-width: 480px) {
+            .profile-section img {
+                width: 80px;
+                height: 80px;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .profile-section h2 {
+                font-size: 1.1em;
+            }
+            .skills-section h3,
+            .contact-section h3 {
+                font-size: 1.2em;
             }
         }
     </style>
@@ -164,16 +175,16 @@
 <body>
     <div class="card">
         <div class="card-header">
-            <h1></h1>
+            <h1> </h1>
         </div>
         <div class="profile-section">
-            <img src="https://i.ibb.co/WPDVMQV/Mu-Qc-Zoi9qjy1-Rarx-Wt-Dz-J-1020.jpg" alt="">
+            <img src="https://i.ibb.co/WPDVMQV/Mu-Qc-Zoi9qjy1-Rarx-Wt-Dz-J-1020.jpg" alt="Profile Image">
             <h2>omgsmok</h2>
-            <p>Hi, My name is omgsmok , i’m a penetration tester with strong background on Web,Mobile,Network,Source Code Review,Thick Client,Red Teaming Throughtout the past 3 year i have found security issues on various companies at work and as well on bug bounties </p>
+            <p>Hey, My name is omgsmok I’m a penetration tester with a strong background in Web Mobile Network Source Code Review Thick Client and Red Teaming Throughout the past 3 years I have found security issues in various companies at work and through bug bounties</p>
         </div>
         </div>
         <div class="contact-section">
-            <h3> Contact </h3>
+            <h3>Contact</h3>
             <div class="contact-links">
                 <a href="https://www.instagram.com/omgsmok">Instagram</a>
                 <a href="https://t.me/omgsmok">Telegram</a>
