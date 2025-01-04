@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> About Me </title>
+    <title> About </title>
     <style>
         body {
             margin: 0;
             font-family: 'Cairo', sans-serif;
-            background: linear-gradient(to bottom right, #fdf7f0, #8e7d63);
-            color: #4b3832;
+            background: linear-gradient(to bottom right, #2c2c2c, #4e4e4e);
+            color: #e0e0e0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow: auto;
             position: relative;
         }
         .card {
             width: 90%;
             max-width: 900px;
             margin: 50px auto;
-            background: #ffffff;
+            background: #3a3a3a;
             border-radius: 15px;
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -32,11 +32,11 @@
         }
         .card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.5);
         }
         .card-header {
             width: 100%;
-            background: linear-gradient(135deg, #d8c3a5, #8e7d63);
+            background: linear-gradient(135deg, #1f1f1f, #4e4e4e);
             padding: 30px 0;
             text-align: center;
             color: #ffffff;
@@ -52,7 +52,7 @@
         }
         .profile-section img {
             border-radius: 50%;
-            border: 8px solid #ffffff;
+            border: 6px solid #3a3a3a;
             width: 160px;
             height: 160px;
             transition: transform 0.3s ease;
@@ -63,25 +63,25 @@
         .profile-section h2 {
             margin-top: 15px;
             font-size: 1.8em;
-            color: #4b3832;
+            color: #ffffff;
             font-weight: bold;
         }
         .profile-section p {
             max-width: 600px;
             margin: 10px auto;
             font-size: 1em;
-            color: #6d4c41;
+            color: #cfcfcf;
             line-height: 1.8;
         }
         .skills-section {
             width: 100%;
-            background: #f5ebe0;
+            background: #2c2c2c;
             padding: 30px 20px;
             text-align: center;
             animation: slideUp 1s ease-in-out;
         }
         .skills-section h3 {
-            color: #4b3832;
+            color: #ffffff;
             font-size: 1.8em;
             margin-bottom: 20px;
             font-weight: bold;
@@ -95,21 +95,22 @@
         .skills-list span {
             display: inline-block;
             padding: 10px 20px;
-            background: #d8c3a5;
+            background: #4e4e4e;
             border-radius: 20px;
             font-size: 1em;
-            color: #4b3832;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             font-weight: bold;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, background 0.3s;
         }
         .skills-list span:hover {
             transform: scale(1.1);
+            background: #1f1f1f;
         }
         .contact-section {
             width: 100%;
             padding: 30px 20px;
-            background: #8e7d63;
+            background: #1f1f1f;
             color: #ffffff;
             text-align: center;
             animation: fadeIn 1s ease-in-out;
@@ -123,7 +124,7 @@
             display: inline-block;
             margin: 0 10px;
             padding: 10px 20px;
-            background: #4b3832;
+            background: #4e4e4e;
             color: #ffffff;
             border-radius: 20px;
             text-decoration: none;
@@ -132,7 +133,7 @@
             font-weight: bold;
         }
         .contact-links a:hover {
-            background: #6d4c41;
+            background: #2c2c2c;
             transform: scale(1.1);
         }
         .contact-links a:active {
@@ -166,30 +167,17 @@
             <h1></h1>
         </div>
         <div class="profile-section">
-            <img src="https://i.ibb.co/jWWB6ZN/photo-2024-08-27-04-40-14.jpg" alt="">
-            <h2> </h2>
-            <p>Hi, My name is omgsmok , i’m a penetration tester with strong background on Web,Mobile,Network,Source Code Review,Thick Client,Red Teaming. Throughtout the past 3 year i have found security issues on various companies at work and as well on bug bounties.</p>
+            <img src="https://i.ibb.co/WPDVMQV/Mu-Qc-Zoi9qjy1-Rarx-Wt-Dz-J-1020.jpg" alt="">
+            <h2>omgsmok</h2>
+            <p>Hi, My name is omgsmok , i’m a penetration tester with strong background on Web,Mobile,Network,Source Code Review,Thick Client,Red Teaming Throughtout the past 3 year i have found security issues on various companies at work and as well on bug bounties </p>
         </div>
-        <div class="skills-section">
-            <h3> skills </h3>
-            <div class="skills-list">
-                <span>HTML & CSS</span>
-                <span>JavaScript</span>
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Python</span>
-                <span>SQL</span>
-                <span>TypeScript</span>
-                <span>UI/UX Design</span>
-                <span>Agile Development</span>
-            </div>
         </div>
         <div class="contact-section">
             <h3> Contact </h3>
             <div class="contact-links">
-                <a href="https://www.instagram.com/omgsmok"> instagram </a>
-                <a href="https://t.me/omgsmok"> Telegram </a>
-                <a href="https://twitter.com/omgsmok"> Twitter </a>
+                <a href="https://www.instagram.com/omgsmok">Instagram</a>
+                <a href="https://t.me/omgsmok">Telegram</a>
+                <a href="https://twitter.com/omgsmok">Twitter</a>
             </div>
         </div>
     </div>
